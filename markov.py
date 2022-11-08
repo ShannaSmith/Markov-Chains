@@ -2,6 +2,7 @@
 
 from random import choice
 
+# python3 markov.py
 
 def open_and_read_file(file_path):
     """Take file path as string; return text as string.
@@ -10,9 +11,8 @@ def open_and_read_file(file_path):
     the file's contents as one string of text.
     """
 
-    # your code goes here
-
-    return 'Contents of your file as one long string'
+    text_string = open(file_path)
+    return text_string.read()
 
 
 def make_chains(text_string):
@@ -56,16 +56,19 @@ def make_text(chains):
 
     return ' '.join(words)
 
-
+#----------------------------------------------------------------------------------------------------
 input_path = 'green-eggs.txt'
 
 # Open the file and turn it into one long string
 input_text = open_and_read_file(input_path)
+print (input_text)
 
 # Get a Markov chain
-chains = make_chains(input_text)
+#chains = make_chains(input_text)
 
 # Produce random text
-random_text = make_text(chains)
+#random_text = make_text(chains)
 
-print(random_text)
+#print(random_text)
+
+
